@@ -1,0 +1,33 @@
+@use '/src/scss/_mixins' as *;
+@use '/src/scss/fonts' as *;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Benzin-Regular';
+    @include fontSize(24);
+    @include mediaFontSize(12);
+}
+
+h1 {
+    @include fontSize(55);
+    @include mediaFontSize(20);
+}
+
+h2 {
+    @include fontSize(48);
+    @include mediaFontSize(18);
+}
+section {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    @include width(1140);
+    @media (max-width: 850px) {
+        width: 95%;
+    }
+}
