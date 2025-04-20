@@ -3,7 +3,6 @@ import { Cabin } from 'next/font/google';
 import '@/scss/index.scss';
 import { Footer } from '@/components/Footer/Footer';
 import { Header } from '@/components/Header/Header';
-import { notFound, usePathname } from 'next/navigation';
 
 const cabinSans = Cabin({
     subsets: ['latin'],
@@ -19,9 +18,6 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    if (children === undefined) {
-        notFound();
-    }
     return (
         <html lang="en">
             <body className={`${cabinSans.className} antialiased`}>
