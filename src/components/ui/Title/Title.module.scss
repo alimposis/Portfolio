@@ -1,0 +1,26 @@
+@use '../../../scss/mixins' as *;
+@use '../../../scss/templates' as centering;
+@use '../../../scss/colors' as *;
+.span {
+    position: relative;
+    p {
+        position: absolute;
+        @extend %centering;
+        left: 100%;
+        @include fontSize(48);
+        font-weight: bold;
+        color: $mainText;
+        @media (max-width: 850px) {
+            @include mediaFontSize(24);
+            left: 130%;
+        }
+    }
+}
+.svg {
+    @include width(106);
+    * {
+        color: $mainColor;
+        fill: $mainColor;
+    }
+    @include mediaWidth(40);
+}

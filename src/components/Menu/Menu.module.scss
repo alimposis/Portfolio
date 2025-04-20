@@ -1,0 +1,13 @@
+@use '../../scss/mixins' as *;
+@use '../../scss/colors' as *;
+
+.nav {
+    display: flex;
+    @include gap(15);
+    @include mediaGap(5);
+    * {
+        color: $mainText;
+        font-weight: bolder;
+        text-decoration: none;
+    }
+}
