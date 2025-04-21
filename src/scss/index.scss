@@ -1,4 +1,5 @@
 @use 'mixins' as *;
+@use 'colors' as *;
 
 * {
     padding: 0;
@@ -7,8 +8,12 @@
     @include fontSize(24);
     @include mediaFontSize(12);
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     display: flex;
+    background: $mainBackgroundColor;
 }
 h1 {
     @include fontSize(55);
@@ -21,7 +26,8 @@ h2 {
 }
 
 .container {
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     @include width(1420);
     @media (max-width: 850px) {
         width: 95%;

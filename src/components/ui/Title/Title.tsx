@@ -1,7 +1,7 @@
 'use client';
 import { memo } from 'react';
 
-import { ReactComponent } from './Title.svg';
+import { ReactComponent } from '@/components/icons/Title.svg';
 
 import TitleStyle from './Title.module.scss';
 import Link from 'next/link';

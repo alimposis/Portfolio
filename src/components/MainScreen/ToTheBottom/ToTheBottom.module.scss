@@ -1,0 +1,38 @@
+@use '/src/scss/mixins' as *;
+@use '/src/scss/colors' as *;
+.a {
+    position: absolute;
+    left: 50%;
+    right: auto;
+    top: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    @media (max-width: 850px) {
+        left: auto;
+        right: 10%;
+        bottom: 30%;
+    }
+    * {
+        @include width(50);
+        height: auto;
+    }
+}
+.svg {
+    color: $mainColor;
+    fill: $mainColor;
+    transform: translate3d(0, 0%, 0);
+    animation: spin 1.4s infinite linear;
+    @include mediaWidth(20);
+}
+
+@keyframes spin {
+    0% {
+        transform: translate3d(0, -100%, 0);
+    }
+    50% {
+        transform: translate3d(0, -70%, 0);
+    }
+    100% {
+        transform: translate3d(0, -100%, 0);
+    }
+}
