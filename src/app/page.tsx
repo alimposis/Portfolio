@@ -1,9 +1,9 @@
-import Image from "next/image";
+import { MainScreen } from '@/components/MainScreen/MainScreen';
 
 export default function Home() {
-  return (
-    <>    
-      
-    </>
-  );
+    return (
+        <>
+            <MainScreen />
+        </>
+    );
 }

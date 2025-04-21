@@ -9,8 +9,6 @@
 }
 body {
     display: flex;
-    @include padding(142, 0, 0, 0);
-    @include mediaPadding(43, 0, 0, 0);
 }
 h1 {
     @include fontSize(55);
