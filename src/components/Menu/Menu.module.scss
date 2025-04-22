@@ -7,6 +7,7 @@
     @include gap(15);
     @include mediaGap(5);
     a {
+        width: max-content;
         @extend %border__bottom;
     }
     * {

@@ -1,4 +1,5 @@
 import { LocationList } from './LocationList/LocationList';
+
 import LocationSectionStyle from './LocationSection.module.scss';
 
 export const LocationSection = () => {

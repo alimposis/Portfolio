@@ -1,0 +1,24 @@
+@use '../../scss/mixins' as *;
+@use '../../scss/colors' as *;
+
+.footer {
+    width: 100%;
+    background: $secondaryBackgroundColor;
+    @include height(100);
+    @include padding(50, 0, 50, 0);
+    @include mediaPadding(20, 0, 20, 0);
+    main {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        @include gap(20);
+        @include mediaGap(10);
+    }
+    @media (max-width: 850px) {
+        height: auto;
+        main {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

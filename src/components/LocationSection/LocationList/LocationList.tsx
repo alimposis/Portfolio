@@ -1,4 +1,5 @@
 'use client';
+
 import { ReactComponent as EmailSVG } from '@/components/icons/email.svg';
 import { ReactComponent as SmsSVG } from '@/components/icons/sms.svg';
 
@@ -10,7 +11,7 @@ export const LocationList = () => {
             <ul className={LocationListStyle.ul}>
                 <li>Нахожусь: Беларусь, Гомель</li>
                 <li>
-                    <a href="">
+                    <a href="mailto:alimpostea@mail.com">
                         <EmailSVG className={LocationListStyle.svg} />
                         alimpostea@mail.ru
                     </a>

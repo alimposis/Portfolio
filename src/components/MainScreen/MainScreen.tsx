@@ -1,7 +1,9 @@
 import Image from 'next/image';
-import MainScreenStyle from './MainScreen.module.scss';
+
 import { NavSocSeti } from '../NavSocSeti/NavSocSeti';
 import { ToTheBottom } from './ToTheBottom/ToTheBottom';
+
+import MainScreenStyle from './MainScreen.module.scss';
 
 export const MainScreen = () => {
     return (
