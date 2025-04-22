@@ -5,7 +5,7 @@
     @extend %section;
     flex-direction: column;
     justify-content: space-between;
-    @include padding(200, 0, 200, 0);
+    @include padding(200, 0, 100, 0);
     @include mediaPadding(20, 0, 10, 0);
     @include mediaGap(5);
     main {
@@ -27,8 +27,8 @@
     }
 }
 .figure {
-    @include width(400);
-    @include height(400);
+    @include width(500);
+    @include height(500);
     position: relative;
     border-radius: 50%;
     overflow: hidden;
