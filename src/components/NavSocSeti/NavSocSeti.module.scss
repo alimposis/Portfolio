@@ -1,4 +1,4 @@
-@use './../../scss/mixins' as *;
+@use '/src/scss/mixins' as *;
 .nav {
     width: 100%;
     display: flex;
@@ -8,6 +8,7 @@
     @media (max-width: 850px) {
         flex-wrap: wrap;
         margin-bottom: auto;
+        margin-top: auto;
     }
     a {
         position: relative;

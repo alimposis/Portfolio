@@ -1,0 +1,38 @@
+@use '/src/scss/colors' as *;
+@use '/src/scss/mixins' as *;
+@use '/src/scss/templates' as *;
+
+.ul {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    list-style: none;
+    @include gap(20);
+    @include margin(0, 0, 0, 20);
+    margin-top: auto;
+    margin-bottom: auto;
+    @include mediaGap(10);
+    @media (max-width: 850px) {
+        margin-top: 0;
+        align-items: center;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        width: max-content;
+        @include gap(10);
+        @extend %border__bottom;
+        @include mediaGap(5);
+    }
+    * {
+        color: $mainText;
+        text-decoration: none;
+    }
+}
+.svg {
+    @include width(35);
+    height: auto;
+    color: $mainColor;
+    fill: $mainColor;
+    @include mediaWidth(15);
+}

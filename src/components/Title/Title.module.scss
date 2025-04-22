@@ -1,6 +1,6 @@
-@use '../../../scss/mixins' as *;
-@use '../../../scss/templates' as centering;
-@use '../../../scss/colors' as *;
+@use '/src/scss/mixins' as *;
+@use '/src/scss/colors' as *;
+@use '/src/scss/templates' as centering;
 .span {
     position: relative;
     p {

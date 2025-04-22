@@ -1,17 +1,17 @@
-@use '../../scss/mixins' as *;
-@use '../../scss/colors' as *;
+@use '/src/scss/mixins' as *;
+@use '/src/scss/colors' as *;
+@use '/src/scss/templates' as *;
 .section {
-    display: flex;
+    @extend %section;
     flex-direction: column;
     justify-content: space-between;
-    width: 100vw;
-    height: 100vh;
     @include padding(200, 0, 200, 0);
     @include mediaPadding(20, 0, 10, 0);
     @include mediaGap(5);
     main {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         @include gap(50);
         @include mediaGap(5);
         @media (max-width: 850px) {

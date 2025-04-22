@@ -1,10 +1,14 @@
 @use '../../scss/mixins' as *;
 @use '../../scss/colors' as *;
+@use '../../scss/templates' as *;
 
 .nav {
     display: flex;
     @include gap(15);
     @include mediaGap(5);
+    a {
+        @extend %border__bottom;
+    }
     * {
         color: $mainText;
         text-decoration: none;

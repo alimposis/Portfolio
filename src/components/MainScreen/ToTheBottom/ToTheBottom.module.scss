@@ -22,7 +22,7 @@
     fill: $mainColor;
     transform: translate3d(0, 0%, 0);
     animation: spin 1.4s infinite linear;
-    @include mediaWidth(20);
+    @include mediaWidth(50);
 }
 
 @keyframes spin {

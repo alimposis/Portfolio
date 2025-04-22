@@ -1,2 +1,5 @@
+@use '/src/scss/mixins' as *;
+@use '/src/scss/colors' as *;
 .button {
+    @include borderRadius(20);
 }

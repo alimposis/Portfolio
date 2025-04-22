@@ -72,3 +72,11 @@
         border: solid calc(($mobile / 360) * 100vw) $color;
     }
 }
+@mixin borderBottom($desctop, $color) {
+    border-bottom: solid calc(($desctop / 1920) * 100vw) $color;
+}
+@mixin mediaBorderBottom($mobile, $color) {
+    @media (max-width: 850px) {
+        border-bottom: solid calc(($mobile / 360) * 100vw) $color;
+    }
+}
