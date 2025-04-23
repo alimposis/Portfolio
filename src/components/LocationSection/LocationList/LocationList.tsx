@@ -15,6 +15,7 @@ export const LocationList = () => {
                 initial={animationOpacity.initial}
                 transition={animationOpacity.transition}
                 whileInView={animationOpacity.animate}
+                viewport={{ once: true }}
             >
                 <li>Нахожусь: Беларусь, Гомель</li>
                 <li>
@@ -24,7 +25,7 @@ export const LocationList = () => {
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="#myForm">
                         <SmsSVG className={LocationListStyle.svg} />
                         Обратная форма
                     </a>

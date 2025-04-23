@@ -1,2 +1,8 @@
+@use '/src/scss/mixins' as *;
+@use '/src/scss/colors' as *;
+@use '/src/scss/templates' as *;
 .input {
+    @extend %text__Field;
+    @include height(30);
+    @include mediaHeight(30);
 }

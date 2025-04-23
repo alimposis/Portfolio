@@ -1,3 +1,4 @@
+import { Form } from '@/components/Form/Form';
 import { LocationSection } from '@/components/LocationSection/LocationSection';
 import { MainScreen } from '@/components/MainScreen/MainScreen';
 
@@ -6,6 +7,7 @@ export default function Home() {
         <>
             <MainScreen />
             <LocationSection />
+            <Form />
         </>
     );
 }

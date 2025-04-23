@@ -1,5 +1,13 @@
 @use '/src/scss/mixins' as *;
 @use '/src/scss/colors' as *;
 .button {
+    cursor: pointer;
+    width: fit-content;
     @include borderRadius(20);
+    @include padding(10, 20, 10, 20);
+    color: $mainText;
+    border: 0;
+    background: $mainColor;
+    @include mediaBorderRadius(20);
+    @include mediaPadding(10, 20, 10, 20);
 }

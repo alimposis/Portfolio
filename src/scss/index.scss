@@ -35,3 +35,12 @@ h2 {
         width: 95%;
     }
 }
+.cursor {
+    background: $mainColor;
+    @include width(25);
+    @include height(25);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}

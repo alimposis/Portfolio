@@ -28,3 +28,19 @@
     }
     @include mediaBorderBottom(2, transparent);
 }
+
+%text__Field {
+    width: 100%;
+    background: $mainColor;
+    border: 0;
+    outline: none;
+    color: $mainText;
+    &::-webkit-input-placeholder {
+        color: $mainText;
+    }
+    @include borderRadius(10);
+    @include padding(20, 10, 20, 10);
+    @include border(2, $mainText);
+    @include mediaPadding(5, 10, 5, 10);
+    @include mediaBorderRadius(5);
+}

@@ -8,7 +8,7 @@ export const Menu = () => {
             <nav className={MenuStyle.nav}>
                 <Link href="/workExperience">Опыт работы</Link>
                 <Link href="/myProjects">Мои проекты</Link>
-                <a href="#myProjects">Форма отправки</a>
+                <a href="#myForm">Обратная форма</a>
             </nav>
         </>
     );

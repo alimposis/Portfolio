@@ -1,0 +1,9 @@
+@use '/src/scss/templates' as *;
+@use '/src/scss/mixins' as *;
+
+.textarea {
+    @extend %text__Field;
+    width: 100%;
+    @include height(150);
+    @include mediaHeight(100);
+}
