@@ -9,8 +9,13 @@ export const secondaryText = {
     animate: { x: 0 },
     transition: { delay: 0.7 },
 };
-export const mainImg = {
+export const animationOpacity = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
     transition: { delay: 1 },
+};
+export const animationLeft = {
+    initial: { x: -1000 },
+    animate: { x: 0 },
+    transition: { delay: 0.5 },
 };
