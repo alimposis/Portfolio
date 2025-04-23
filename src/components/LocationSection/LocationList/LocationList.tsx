@@ -2,7 +2,7 @@
 
 import { ReactComponent as EmailSVG } from '@/components/icons/email.svg';
 import { ReactComponent as SmsSVG } from '@/components/icons/sms.svg';
-import { animate, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 import LocationListStyle from './LocationList.module.scss';
 import { animationOpacity } from '@/data/animations';
