@@ -6,15 +6,57 @@ import { TextareaForm } from './TextareaForm/TextareaForm';
 import FormStyle from './Form.module.scss';
 import { animationOpacity } from '@/data/animations';
 import { Button } from '@/components/ui/Button/Button';
+import axios from 'axios';
+import { useActionState } from 'react';
+import { IActionState } from '@/models';
 
 export const Form = () => {
+    const [state, submitAction] = useActionState<IActionState>(formOnSubmit, {
+        data: null,
+        error: null,
+    });
+    async function formOnSubmit(prevState: IActionState, formData: FormData) {
+        const tel = formData.get('tel');
+        const tg = formData.get('tg');
+        const message = formData.get('message');
+        const email = formData.get('email');
+        const text = `
+        Сообщение с портфолио
+        tel: ${tel || 'не указанно'}
+        tg: ${tg || 'не указанно'}
+        email:${email || 'не указанно'}
+        message:${message}
+        `;
+        try {
+            axios.post(
+                '/Portfolio/api/posts',
+                {
+                    text,
+                },
+                {
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                },
+            );
+            return {
+                data: 'Письмо успешно отправилось',
+                error: null,
+            };
+        } catch {
+            return {
+                data: null,
+                error: 'Возникла ошибка, письмо не отправилось',
+            };
+        }
+    }
     return (
         <>
             <section id="myForm">
                 <main className="container">
                     <motion.form
                         className={FormStyle.form}
-                        action=""
+                        action={submitAction}
                         initial={animationOpacity.initial}
                         whileInView={animationOpacity.animate}
                         transition={animationOpacity.transition}
@@ -22,10 +64,13 @@ export const Form = () => {
                     >
                         <h2>Связь со мной</h2>
                         <section className={FormStyle.section}>
-                            <Input text="Номер телефона" type="tel" />
-                            <Input text="TG" type="text" />
+                            <Input name="tel" text="Номер телефона" type="tel" />
+                            <Input name="tg" text="TG" type="text" />
+                            <Input name="email" text="email" type="email" />
                             <TextareaForm />
                             <Button text="Отправить" />
+                            {state.error && <p style={{ color: 'red' }}>{state.error}</p>}
+                            {state.data && <p style={{ color: 'green' }}>{state.data}</p>}
                         </section>
                     </motion.form>
                 </main>
