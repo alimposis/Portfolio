@@ -7,7 +7,6 @@ export const Menu = () => {
         <>
             <nav className={MenuStyle.nav}>
                 <Link href="/workExperience#MyStack">My stack</Link>
-                <Link href="/workExperience">Work experience</Link>
                 <a href="#myForm">Reverse form</a>
             </nav>
         </>
