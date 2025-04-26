@@ -5,8 +5,7 @@
     @extend %section;
     flex-direction: column;
     justify-content: space-between;
-    @include padding(200, 0, 100, 0);
-    @include mediaPadding(20, 0, 10, 0);
+    @extend %first__section;
     @include mediaGap(5);
     main {
         display: flex;

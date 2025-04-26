@@ -2,7 +2,7 @@ import { LocationList } from './LocationList/LocationList';
 
 import LocationSectionStyle from './LocationSection.module.scss';
 
-export const LocationSection = () => {
+const LocationSection = () => {
     return (
         <>
             <section className={LocationSectionStyle.section} id="TwoSection">
@@ -48,3 +48,5 @@ export const LocationSection = () => {
         </>
     );
 };
+
+export default LocationSection;

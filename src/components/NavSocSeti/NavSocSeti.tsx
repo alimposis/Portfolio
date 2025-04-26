@@ -21,7 +21,7 @@ export const NavSocSeti = () => {
                     whileHover={icons}
                     href="https://rabota.by/resume/f0d3fcfcff0df1cfe40039ed1f514870617056"
                 >
-                    <HHSVG />
+                    <HHSVG className={NavSocSetiStyle.hh} />
                 </motion.a>
                 <motion.a whileHover={icons} href="https://github.com/alimposis">
                     <GitHubSVG />

@@ -1,4 +1,7 @@
-export const icons = { rotate: 360 };
+export const icons = {
+    rotate: 10,
+    scale: 1.05,
+};
 export const mainText = {
     initial: { x: 800 },
     animate: { x: 0 },

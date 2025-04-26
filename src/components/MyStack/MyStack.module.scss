@@ -1,0 +1,14 @@
+@use '/src/scss/mixins' as *;
+@use '/src/scss/templates' as *;
+
+.main {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    min-height: 100vh;
+    @include gap(20);
+    @extend %first__section;
+    @include mediaGap(10);
+}

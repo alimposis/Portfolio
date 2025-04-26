@@ -1,5 +1,5 @@
-@use '../../scss/mixins' as *;
-@use '../../scss/colors' as *;
+@use '/src/scss/mixins' as *;
+@use '/src/scss/colors' as *;
 
 .header {
     position: fixed;
@@ -8,6 +8,7 @@
     @include padding(15, 0, 15, 0);
     top: 0;
     display: flex;
+    background: $secondaryBackgroundColor;
     @include mediaPadding(5, 0, 5, 0);
     main {
         margin-left: auto;

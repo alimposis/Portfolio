@@ -1,0 +1,26 @@
+@use '/src/scss/mixins' as *;
+@use '/src/scss/colors' as *;
+.article {
+    display: flex;
+    flex-direction: column;
+    background: $secondaryBackgroundColor;
+    @include gap(15);
+    @include padding(20, 15, 20, 15);
+    @include borderRadius(20);
+    @include border(2, $mainColor);
+    @include width(500);
+    @include gap(15);
+    @include mediaGap(5);
+    @include mediaBorderRadius(10);
+    @include mediaPadding(10, 5, 10, 5);
+    @media (max-width: 850px) {
+        width: 100%;
+    }
+    p,
+    h3 {
+        color: $mainText;
+    }
+}
+.progress {
+    @include width(300);
+}

@@ -6,9 +6,9 @@ export const Menu = () => {
     return (
         <>
             <nav className={MenuStyle.nav}>
-                <Link href="/workExperience">Опыт работы</Link>
-                <Link href="/myProjects">Мои проекты</Link>
-                <a href="#myForm">Обратная форма</a>
+                <Link href="/workExperience#MyStack">My stack</Link>
+                <Link href="/workExperience">Work experience</Link>
+                <a href="#myForm">Reverse form</a>
             </nav>
         </>
     );

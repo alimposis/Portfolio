@@ -19,8 +19,8 @@
         @include mediaWidth(50);
         @include mediaHeight(50);
         @media (max-width: 850px) {
-            margin-left: 10%;
-            margin-right: 10%;
+            margin-left: 5%;
+            margin-right: 5%;
             max-width: 52px;
             max-height: 52px;
         }
@@ -29,4 +29,7 @@
             height: 100%;
         }
     }
+}
+.hh {
+    fill: #660007;
 }

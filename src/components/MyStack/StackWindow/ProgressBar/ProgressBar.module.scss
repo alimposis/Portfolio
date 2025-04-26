@@ -1,0 +1,19 @@
+@use '/src/scss/mixins' as *;
+@use '/src/scss/colors' as *;
+.progressbar {
+    background: $mainBackgroundColor;
+    color: white;
+    width: 80%;
+    @include border(1, $secondaryColor);
+    @include height(15);
+    @include borderRadius(20);
+    @include mediaHeight(10);
+    @include mediaBorderRadius(20);
+}
+.progressbar__span {
+    display: flex;
+    height: 100%;
+    background: $mainColor;
+    @include borderRadius(20);
+    @include mediaBorderRadius(20);
+}

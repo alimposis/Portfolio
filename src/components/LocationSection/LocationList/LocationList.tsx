@@ -1,11 +1,12 @@
 'use client';
+import { motion } from 'framer-motion';
+
+import { animationOpacity } from '@/data/animations';
 
 import { ReactComponent as EmailSVG } from '@/components/icons/email.svg';
 import { ReactComponent as SmsSVG } from '@/components/icons/sms.svg';
-import { motion } from 'framer-motion';
 
 import LocationListStyle from './LocationList.module.scss';
-import { animationOpacity } from '@/data/animations';
 
 export const LocationList = () => {
     return (
@@ -17,7 +18,7 @@ export const LocationList = () => {
                 whileInView={animationOpacity.animate}
                 viewport={{ once: true }}
             >
-                <li>Нахожусь: Беларусь, Гомель</li>
+                <li>I am in: Belarus, Gomel</li>
                 <li>
                     <a href="mailto:alimpostea@mail.com">
                         <EmailSVG className={LocationListStyle.svg} />
@@ -27,7 +28,7 @@ export const LocationList = () => {
                 <li>
                     <a href="#myForm">
                         <SmsSVG className={LocationListStyle.svg} />
-                        Обратная форма
+                        Reverse form
                     </a>
                 </li>
             </motion.ul>

@@ -36,11 +36,15 @@
     outline: none;
     color: $mainText;
     &::-webkit-input-placeholder {
-        color: $mainText;
+        color: rgba($color: $mainText, $alpha: 0.7);
     }
     @include borderRadius(10);
     @include padding(20, 10, 20, 10);
     @include border(2, $mainText);
     @include mediaPadding(5, 10, 5, 10);
     @include mediaBorderRadius(5);
+}
+%first__section {
+    @include padding(200, 0, 100, 0);
+    @include mediaPadding(70, 0, 10, 0);
 }

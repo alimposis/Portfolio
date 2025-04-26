@@ -11,14 +11,14 @@ export const MyName = () => {
                     animate={mainText.animate}
                     transition={mainText.transition}
                 >
-                    Водяников Ярослав
+                    Vodyanikov Yaroslav
                 </motion.h1>
                 <motion.p
                     initial={secondaryText.initial}
                     animate={secondaryText.animate}
                     transition={secondaryText.transition}
                 >
-                    Front-end разработчик
+                    Front-end development
                 </motion.p>
             </address>
         </>

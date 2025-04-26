@@ -1,16 +1,18 @@
 'use client';
 import { motion } from 'framer-motion';
-import { Input } from '@/components/ui/Input/Input';
-import { TextareaForm } from './TextareaForm/TextareaForm';
-
-import FormStyle from './Form.module.scss';
-import { animationOpacity } from '@/data/animations';
-import { Button } from '@/components/ui/Button/Button';
 import axios from 'axios';
 import { useActionState } from 'react';
+
+import { Input } from '@/components/ui/Input/Input';
+import { TextareaForm } from './TextareaForm/TextareaForm';
+import { animationOpacity } from '@/data/animations';
+import { Button } from '@/components/ui/Button/Button';
+
 import { IActionState } from '@/models';
 
-export const Form = () => {
+import FormStyle from './Form.module.scss';
+
+const Form = () => {
     const [state, submitAction] = useActionState<IActionState>(formOnSubmit, {
         data: null,
         error: null,
@@ -62,13 +64,13 @@ export const Form = () => {
                         transition={animationOpacity.transition}
                         viewport={{ once: true }}
                     >
-                        <h2>Связь со мной</h2>
+                        <h2>Contact with me</h2>
                         <section className={FormStyle.section}>
-                            <Input name="tel" text="Номер телефона" type="tel" />
-                            <Input name="tg" text="TG" type="text" />
+                            <Input name="tel" text="+375 (99) 999-99-99" type="tel" />
+                            <Input name="tg" text="Tg: @Alimpoz" type="text" />
                             <Input name="email" text="email" type="email" />
                             <TextareaForm />
-                            <Button text="Отправить" />
+                            <Button text="Send" />
                             {state.error && <p style={{ color: 'red' }}>{state.error}</p>}
                             {state.data && <p style={{ color: 'green' }}>{state.data}</p>}
                         </section>
@@ -78,3 +80,5 @@ export const Form = () => {
         </>
     );
 };
+
+export default Form;

@@ -6,7 +6,7 @@ export const TextareaForm = () => {
                 name="message"
                 id=""
                 className={TextareaStyle.textarea}
-                placeholder="Напишите сообщение"
+                placeholder="Write a message"
                 required
             />
         </>

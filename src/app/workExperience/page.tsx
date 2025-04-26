@@ -1,7 +1,13 @@
+import dynamic from 'next/dynamic';
+
+import { MyStack } from '@/components/MyStack/MyStack';
+const Form = dynamic(() => import('@/components/Form/Form'));
+
 export default function Page() {
     return (
         <>
-            <h2>Hello</h2>
+            <MyStack />
+            <Form />
         </>
     );
 }
