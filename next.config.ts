@@ -1,6 +1,7 @@
 import type { NextConfig } from 'next';
 /** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
+    assetPrefix: '/portfolio-b3t4.vercel.app',
     pageExtensions: ['tsx', 'ts'],
     env: {
         TELEGRAMM_API:
