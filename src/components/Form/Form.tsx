@@ -1,7 +1,8 @@
 'use client';
+
 import { motion } from 'framer-motion';
 import axios from 'axios';
-import { useActionState } from 'react';
+import { useFormState } from 'react-dom';
 
 import { Input } from '@/components/ui/Input/Input';
 import { TextareaForm } from './TextareaForm/TextareaForm';
@@ -12,72 +13,59 @@ import { IActionState } from '@/models';
 
 import FormStyle from './Form.module.scss';
 
-const Form = () => {
-    const [state, submitAction] = useActionState<IActionState>(formOnSubmit, {
-        data: null,
-        error: null,
-    });
-    async function formOnSubmit(prevState: IActionState, formData: FormData) {
-        const tel = formData.get('tel');
-        const tg = formData.get('tg');
-        const message = formData.get('message');
-        const email = formData.get('email');
-        const text = `
+async function formOnSubmit(prevState: IActionState, formData: FormData): Promise<IActionState> {
+    const tel = formData.get('tel');
+    const tg = formData.get('tg');
+    const email = formData.get('email');
+    const message = formData.get('message');
+
+    const text = `
         Сообщение с портфолио
         tel: ${tel || 'не указанно'}
         tg: ${tg || 'не указанно'}
-        email:${email || 'не указанно'}
-        message:${message}
-        `;
-        try {
-            axios.post(
-                '/Portfolio/api/posts',
-                {
-                    text,
-                },
-                {
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                },
-            );
-            return {
-                data: 'Письмо успешно отправилось',
-                error: null,
-            };
-        } catch {
-            return {
-                data: null,
-                error: 'Возникла ошибка, письмо не отправилось',
-            };
-        }
+        email: ${email || 'не указанно'}
+        message: ${message}
+    `;
+
+    try {
+        await axios.post('/api/posts', { text });
+        return { data: 'Письмо успешно отправилось', error: null };
+    } catch {
+        return { data: null, error: 'Возникла ошибка, письмо не отправилось' };
     }
+}
+
+const Form = () => {
+    const [state, submitAction] = useFormState(formOnSubmit, {
+        data: null,
+        error: null,
+    });
+
     return (
-        <>
-            <section id="myForm">
-                <main className="container">
-                    <motion.form
-                        className={FormStyle.form}
-                        action={submitAction}
-                        initial={animationOpacity.initial}
-                        whileInView={animationOpacity.animate}
-                        transition={animationOpacity.transition}
-                        viewport={{ once: true }}
-                    >
-                        <h2>Contact with me</h2>
-                        <section className={FormStyle.section}>
-                            <Input name="tel" text="+375 (99) 999-99-99" type="tel" />
-                            <Input name="tg" text="Tg: @Alimpoz" type="text" />
-                            <Input name="email" text="email" type="email" />
-                            <TextareaForm />
-                            <Button text="Send" />
-                            {state.error && <p style={{ color: 'red' }}>{state.error}</p>}
-                            {state.data && <p style={{ color: 'green' }}>{state.data}</p>}
-                        </section>
-                    </motion.form>
-                </main>
-            </section>
-        </>
+        <section id="myForm">
+            <main className="container">
+                <motion.form
+                    className={FormStyle.form}
+                    action={submitAction}
+                    initial={animationOpacity.initial}
+                    whileInView={animationOpacity.animate}
+                    transition={animationOpacity.transition}
+                    viewport={{ once: true }}
+                >
+                    <h2>Contact with me</h2>
+                    <section className={FormStyle.section}>
+                        <Input name="tel" text="+375 (99) 999-99-99" type="tel" />
+                        <Input name="tg" text="Tg: @Alimpoz" type="text" />
+                        <Input name="email" text="email" type="email" />
+                        <TextareaForm />
+                        <Button text="Send" />
+
+                        {state.error && <p style={{ color: 'red' }}>{state.error}</p>}
+                        {state.data && <p style={{ color: 'green' }}>{state.data}</p>}
+                    </section>
+                </motion.form>
+            </main>
+        </section>
     );
 };
 
