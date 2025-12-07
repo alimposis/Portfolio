@@ -1,7 +1,6 @@
 import type { NextConfig } from 'next';
 /** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
-    basePath: '/Portfolio',
     pageExtensions: ['tsx', 'ts'],
     env: {
         TELEGRAMM_API:
