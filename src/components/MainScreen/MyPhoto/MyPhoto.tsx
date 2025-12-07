@@ -1,4 +1,6 @@
 'use client';
+import image from '@/assets/Images/Main.png';
+
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -15,7 +17,7 @@ export const MyPhoto = () => {
                 animate={animationOpacity.animate}
                 transition={animationOpacity.transition}
             >
-                <Image src="/images/Main.png" fill alt="Мое фото" />
+                <Image src={image} fill alt="Мое фото" />
             </motion.figure>
         </>
     );
