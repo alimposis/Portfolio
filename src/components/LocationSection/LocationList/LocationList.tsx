@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 import { animationOpacity } from '@/data/animations';
 
-import { ReactComponent as EmailSVG } from '@/components/icons/email.svg';
+import { ReactComponent as PhoneSVG } from '@/components/icons/phone.svg';
 import { ReactComponent as SmsSVG } from '@/components/icons/sms.svg';
 
 import LocationListStyle from './LocationList.module.scss';
@@ -18,11 +18,11 @@ export const LocationList = () => {
                 whileInView={animationOpacity.animate}
                 viewport={{ once: true }}
             >
-                <li>I am in: Belarus, Gomel</li>
+                <li>I live in Belarus, Gomel</li>
                 <li>
-                    <a href="mailto:alimpostea@mail.com">
-                        <EmailSVG className={LocationListStyle.svg} />
-                        alimpostea@mail.ru
+                    <a href="tel:+375291502886">
+                        <PhoneSVG className={LocationListStyle.svg} />
+                        +375 (29) 150-28-86
                     </a>
                 </li>
                 <li>

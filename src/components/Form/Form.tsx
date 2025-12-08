@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import axios from 'axios';
-import { useFormState } from 'react-dom';
 
 import { Input } from '@/components/ui/Input/Input';
 import { TextareaForm } from './TextareaForm/TextareaForm';
@@ -12,6 +11,7 @@ import { Button } from '@/components/ui/Button/Button';
 import { IActionState } from '@/models';
 
 import FormStyle from './Form.module.scss';
+import { useActionState } from 'react';
 
 async function formOnSubmit(prevState: IActionState, formData: FormData): Promise<IActionState> {
     const tel = formData.get('tel');
@@ -36,7 +36,7 @@ async function formOnSubmit(prevState: IActionState, formData: FormData): Promis
 }
 
 const Form = () => {
-    const [state, submitAction] = useFormState(formOnSubmit, {
+    const [state, submitAction] = useActionState(formOnSubmit, {
         data: null,
         error: null,
     });
