@@ -10,11 +10,14 @@
         }
     }
 }
+.main {
+    display: flex;
+    position: relative;
+    height: 500px;
+}
 .map {
-    margin-top: auto;
-    margin-bottom: auto;
-    @include width(1000);
-    @include height(500);
+    position: relative;
+    width: 65%;
     @extend %ymaps__layers__pane;
     iframe {
         width: 100%;

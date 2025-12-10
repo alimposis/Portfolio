@@ -3,18 +3,32 @@
 .section {
     display: flex;
     flex-direction: column;
-    margin: 200px 0;
+    margin: 150px 0;
     gap: 20px;
+    scroll-margin-top: 80px;
 }
 .main {
     display: flex;
     flex-direction: column;
     gap: 14px;
+    align-items: center;
     p {
         width: 50%;
         color: $mainText;
+        align-items: center;
+        height: min-content;
+        margin: auto 0;
     }
 }
 .h2 {
     margin: 0 auto;
+}
+.div {
+    display: flex;
+    gap: 14px;
+}
+.span {
+    width: 3px;
+    background-color: white;
+    color: white;
 }
