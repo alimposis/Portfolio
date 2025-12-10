@@ -1,23 +1,28 @@
+'use client';
+import { usePathname } from 'next/navigation';
+
 import { routes } from '@/constants/routes';
 
 import Link from 'next/link';
 
-import { useRouter } from 'next/router';
-
-import MenuStyle from './Menu.module.scss';
+import styles from './Menu.module.scss';
 
 export const Menu = () => {
-    const router = useRouter();
-
+    const pathname = usePathname();
+    console.debug(pathname);
     return (
         <>
-            <nav className={MenuStyle.nav}>
+            <nav className={styles.nav}>
                 {routes.map((element, index) => (
-                    <Link href={element.href} key={index}>
+                    <Link
+                        href={element.href}
+                        key={index}
+                        className={pathname === element.href ? styles.active : undefined}
+                    >
                         {element.name}
                     </Link>
                 ))}
-                <a href="#myForm">Reverse form</a>
+                <a href="#myForm">reverse form</a>
             </nav>
         </>
     );

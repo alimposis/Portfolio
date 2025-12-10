@@ -9,9 +9,13 @@
     a {
         width: max-content;
         @extend %border__bottom;
+        padding-bottom: 2px;
     }
     * {
         color: $mainText;
         text-decoration: none;
+    }
+    .active {
+        border-color: $mainColor;
     }
 }

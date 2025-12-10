@@ -4,8 +4,9 @@ interface Route {
 }
 
 export const routes: Route[] = [
+    { name: 'home', href: '/' },
     {
-        name: 'workExperience',
+        name: 'work experience',
         href: '/workExperience',
     },
 ];

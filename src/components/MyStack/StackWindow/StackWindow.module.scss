@@ -19,6 +19,9 @@
     p,
     h3 {
         color: $mainText;
+        &::first-letter {
+            text-transform: uppercase;
+        }
     }
 }
 .progress {

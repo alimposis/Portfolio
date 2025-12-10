@@ -1,6 +1,8 @@
-import { IListStack } from '@/models';
-import { StackWindow } from '../StackWindow/StackWindow';
+import type { IListStack } from '@/models';
+
 import axios from 'axios';
+
+import { StackWindow } from '../StackWindow/StackWindow';
 
 export const MyStackWrapper = async () => {
     const stackData: IListStack[] | undefined = await axios
