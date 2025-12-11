@@ -8,10 +8,10 @@ const Form = dynamic(() => import('@/components/Form/Form'));
 export default function Home() {
     return (
         <>
-            <MainScreen />
-            <AboutMe />
+            {/* <MainScreen /> */}
+            {/* <AboutMe />
             <LocationSection />
-            <Form />
+            <Form /> */}
         </>
     );
 }

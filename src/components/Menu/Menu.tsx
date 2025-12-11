@@ -12,12 +12,14 @@ export const Menu = () => {
     console.debug(pathname);
     return (
         <>
-            <nav className={styles.nav}>
+            <nav className="flex gap-4 text-2xl text-white">
                 {routes.map((element, index) => (
                     <Link
                         href={element.href}
                         key={index}
-                        className={pathname === element.href ? styles.active : undefined}
+                        className={`border-b-[3px] border-transparent hover:border-[var(--mainColor)] ${
+                            pathname === element.href ? 'border-[var(--mainColor)]!' : ''
+                        }`}
                     >
                         {element.name}
                     </Link>

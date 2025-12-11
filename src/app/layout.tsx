@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
 import { Cabin } from 'next/font/google';
-import '@/scss/index.scss';
+
 import { Footer } from '@/components/Footer/Footer';
 import { Header } from '@/components/Header/Header';
+
+import './global.css';
 
 const cabinSans = Cabin({
     subsets: ['latin'],
@@ -23,7 +25,7 @@ export default function RootLayout({
             <body className={`${cabinSans.className} antialiased`}>
                 <Header />
                 {children}
-                <Footer />
+                {/* <Footer /> */}
             </body>
         </html>
     );
