@@ -12,3 +12,6 @@
         --mainText: rgb(255, 255, 255);
     }
 }
+@theme {
+    --color-main-color: #763cac;
+}
