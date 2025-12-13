@@ -10,6 +10,7 @@ export const MyName = () => {
                     initial={mainText.initial}
                     animate={mainText.animate}
                     transition={mainText.transition}
+                    className="text-5xl"
                 >
                     Vodyanikov Yaroslav
                 </motion.h1>
@@ -17,6 +18,7 @@ export const MyName = () => {
                     initial={secondaryText.initial}
                     animate={secondaryText.animate}
                     transition={secondaryText.transition}
+                    className="text-3xl"
                 >
                     Front-end development
                 </motion.p>

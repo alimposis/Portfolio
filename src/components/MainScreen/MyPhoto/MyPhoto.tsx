@@ -6,18 +6,16 @@ import { motion } from 'framer-motion';
 
 import { animationOpacity } from '@/data/animations';
 
-import MainScreenStyle from './../MainScreen.module.scss';
-
 export const MyPhoto = () => {
     return (
         <>
             <motion.figure
-                className={MainScreenStyle.figure}
+                className="w-lg h-120 relative rounded-[50%] overflow-hidden"
                 initial={animationOpacity.initial}
                 animate={animationOpacity.animate}
                 transition={animationOpacity.transition}
             >
-                <Image src={image} fill alt="Мое фото" />
+                <Image src={image} fill alt="Мое фото" className="w-full h-full" />
             </motion.figure>
         </>
     );
