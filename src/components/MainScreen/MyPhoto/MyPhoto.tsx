@@ -10,7 +10,7 @@ export const MyPhoto = () => {
     return (
         <>
             <motion.figure
-                className="w-lg h-120 relative rounded-[50%] overflow-hidden"
+                className="relative rounded-[50%] size-[80vw] overflow-hidden md:w-lg md:h-128"
                 initial={animationOpacity.initial}
                 animate={animationOpacity.animate}
                 transition={animationOpacity.transition}
