@@ -9,9 +9,9 @@ export default function Home() {
     return (
         <>
             <MainScreen />
-            {/* <AboutMe />
-            <LocationSection />
-            <Form /> */}
+            <AboutMe />
+            {/* <LocationSection /> */}
+            {/* <Form /> */}
         </>
     );
 }

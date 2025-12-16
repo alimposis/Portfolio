@@ -29,7 +29,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${cabinSans.className} antialiased`}>
+            <body className={`${cabinSans.className} antialiased bg-[var(--mainBackgroundColor)]`}>
                 <Header />
                 {children}
                 {/* <Footer /> */}
