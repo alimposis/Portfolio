@@ -11,7 +11,7 @@ export default function Home() {
             <MainScreen />
             <AboutMe />
             {/* <LocationSection /> */}
-            {/* <Form /> */}
+            <Form />
         </>
     );
 }

@@ -43,17 +43,17 @@ const Form = () => {
 
     return (
         <section id="myForm">
-            <main className="container">
+            <main className="container mx-auto">
                 <motion.form
-                    className={FormStyle.form}
+                    className="gap-y-3 flex flex-col items-center bg-[var(--secondaryBackgroundColor)] mx-auto w-5xl mb-[50px] p-[20px] border-2 border-[var(--mainColor)] rounded-md text-[var(--mainText)]"
                     action={submitAction}
                     initial={animationOpacity.initial}
                     whileInView={animationOpacity.animate}
                     transition={animationOpacity.transition}
                     viewport={{ once: true }}
                 >
-                    <h2>Contact with me</h2>
-                    <section className={FormStyle.section}>
+                    <h2 className="text-2xl md:text-3xl">Contact with me</h2>
+                    <section className="flex flex-col items-center gap-[20px] w-[80%]">
                         <Input name="tel" text="+375 (99) 999-99-99" type="tel" />
                         <Input name="tg" text="Tg: @Alimpoz" type="text" />
                         <Input name="email" text="email" type="email" />
