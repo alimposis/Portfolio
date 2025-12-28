@@ -1,17 +1,18 @@
 'use client';
 
+import type { IActionState } from '@/models';
+
 import { motion } from 'framer-motion';
 import axios from 'axios';
+import { useActionState } from 'react';
 
 import { Input } from '@/components/ui/Input/Input';
 import { TextareaForm } from './TextareaForm/TextareaForm';
 import { animationOpacity } from '@/data/animations';
 import { Button } from '@/components/ui/Button/Button';
-
-import { IActionState } from '@/models';
-
-import FormStyle from './Form.module.scss';
-import { useActionState } from 'react';
+import { TelInput } from './TelInput/TelInput';
+import { TgInput } from './TgInput/TgInput';
+import { MailInput } from './MailInput/MailInput';
 
 async function formOnSubmit(prevState: IActionState, formData: FormData): Promise<IActionState> {
     const tel = formData.get('tel');
@@ -43,9 +44,9 @@ const Form = () => {
 
     return (
         <section id="myForm">
-            <main className="container mx-auto">
+            <main className="mx-3.5 md:mx-auto md:max-w-2xl">
                 <motion.form
-                    className="gap-y-3 flex flex-col items-center bg-[var(--secondaryBackgroundColor)] mx-auto w-5xl mb-[50px] p-[20px] border-2 border-[var(--mainColor)] rounded-md text-[var(--mainText)]"
+                    className="shadow-lg w-full  shadow-main-color gap-y-3 flex flex-col  items-center bg-[var(--secondaryBackgroundColor)] p-[20px] border-2 border-[var(--mainColor)] rounded-md text-[var(--mainText)] mx-auto md:mb-[50px]"
                     action={submitAction}
                     initial={animationOpacity.initial}
                     whileInView={animationOpacity.animate}
@@ -53,13 +54,12 @@ const Form = () => {
                     viewport={{ once: true }}
                 >
                     <h2 className="text-2xl md:text-3xl">Contact with me</h2>
-                    <section className="flex flex-col items-center gap-[20px] w-[80%]">
-                        <Input name="tel" text="+375 (99) 999-99-99" type="tel" />
-                        <Input name="tg" text="Tg: @Alimpoz" type="text" />
-                        <Input name="email" text="email" type="email" />
+                    <section className="w-full flex flex-col items-center gap-3 md:gap-[20px]">
+                        <TelInput />
+                        <TgInput />
+                        <MailInput />
                         <TextareaForm />
                         <Button text="Send" />
-
                         {state.error && <p style={{ color: 'red' }}>{state.error}</p>}
                         {state.data && <p style={{ color: 'green' }}>{state.data}</p>}
                     </section>

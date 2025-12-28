@@ -8,7 +8,7 @@ import { links } from '@/constants/links';
 export const NavSocSeti = () => {
     return (
         <>
-            <nav className="mx-auto relative flex items-center justify-center flex-wrap  gap-x-[25vw] gap-y-5 md:gap-12.5 md:w-[50%]">
+            <nav className="mx-auto relative flex items-center justify-center flex-wrap  gap-x-[25vw] gap-y-5 md:gap-12.5 md:w-[50%] md:mb-[5vw]">
                 {links.map((e, index) => (
                     <motion.a
                         whileHover={icons}

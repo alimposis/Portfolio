@@ -12,7 +12,9 @@ export const DesktopMenu = ({ pathname }: { pathname: string }) => {
                         href={element.href}
                         key={index}
                         className={`transition border-b-[3px] border-transparent h-min my-auto  hover:border-[var(--mainColor)]  ${
-                            pathname === element.href ? 'border-[var(--mainColor)]!' : ''
+                            pathname === element.href
+                                ? 'border-[var(--mainColor)]! shadow-lg shadow-main-color'
+                                : ''
                         }`}
                     >
                         {element.name}

@@ -8,21 +8,21 @@ export const AboutMe = () => {
                 <h2 className="mx-auto text-[var(--secondaryColor)] text-2xl md:text-3xl">
                     About me
                 </h2>
-                <main className="mx-3.5 flex flex-col text-[var(--secondaryColor)] gap-[14px] items-center md:container md:mx-auto">
-                    <div className="flex flex-col gap-[14px] md:flex-row">
-                        <div className="flex w-min flex-col">
+                <main className="mx-3.5 flex flex-col text-[var(--secondaryColor)] gap-[14px] items-center md:container md:mx-auto ">
+                    <div className="flex flex-col gap-[14px] w-full md:flex-row md:w-fit">
+                        <div className="flex w-fit flex-col mx-auto md:m-0">
                             <h3 className="text-xl text-center mb-3 md:text-right">
                                 Work experience
                             </h3>
-                            <p className="items-center h-min my-auto w-max md:text-right  ">
+                            <p className="items-center w-full h-min my-auto md:text-right">
                                 Web Developer at “TARGET-GROUP,” 2024 <br />
                                 Stack: JS, WordPress, React, jQuery, HTML, CSS, Figma
                             </p>
                         </div>
                         <span className="w-1 hidden bg-white md:block" />
-                        <div className="flex w-fit flex-col">
+                        <div className="flex w-fit flex-col mx-auto md:m-0">
                             <h3 className="text-xl mb-3 text-center md:text-left">Education</h3>
-                            <p className="items-center h-min my-auto w-fit md:text-left">
+                            <p className="items-center h-min my-auto w-full md:text-left">
                                 I completed courses at “IT Step Academy”,
                                 <br /> gaining practical skills in JS, TS, React, HTML, and CSS to
                                 <br />

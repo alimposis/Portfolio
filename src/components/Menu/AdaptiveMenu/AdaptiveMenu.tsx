@@ -24,7 +24,7 @@ export const AdaptiveMenu = ({ pathname }: { pathname: string }) => {
                             <Link
                                 href={element.href}
                                 key={index}
-                                className={`w-fit transition border-b-[3px] border-transparent h-min  hover:border-[var(--mainColor)]  ${
+                                className={`w-fit transition border-b-[3px] border-transparent h-min  hover:border-[var(--mainColor)] ${
                                     pathname === element.href ? 'border-[var(--mainColor)]!' : ''
                                 }`}
                                 onClick={() => setStateMenu(false)}

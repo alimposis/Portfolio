@@ -4,7 +4,6 @@ export const TextareaForm = () => {
         <>
             <textarea
                 name="message"
-                id=""
                 className={TextareaStyle.textarea}
                 placeholder="Write a message"
                 required

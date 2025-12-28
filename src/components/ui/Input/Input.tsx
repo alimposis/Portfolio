@@ -17,7 +17,12 @@ export const Input = ({
 
     return (
         <>
-            <input name={name} className={InputStyle.input} type={type} placeholder={text} />
+            <input
+                name={name}
+                className="outline-none h-[40px] w-full bg-[var(--mainColor)] color-[var(--mainText)] border-2 rounded-lg px-2"
+                type={type}
+                placeholder={text}
+            />
         </>
     );
 };
