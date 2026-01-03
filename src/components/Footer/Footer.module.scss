@@ -4,7 +4,6 @@
 .footer {
     width: 100%;
     background: $secondaryBackgroundColor;
-    @include height(100);
     @include padding(50, 0, 50, 0);
     @include mediaPadding(20, 0, 20, 0);
     main {

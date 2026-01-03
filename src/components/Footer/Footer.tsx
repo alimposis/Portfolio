@@ -1,14 +1,10 @@
-import { Menu } from '../Menu/Menu';
 import { NavSocSeti } from '../NavSocSeti/NavSocSeti';
-
-import FooterStyle from './Footer.module.scss';
 
 export const Footer = () => {
     return (
         <>
-            <footer className={FooterStyle.footer}>
-                <main className="container">
-                    <Menu />
+            <footer className="w-full bg-[var(--secondaryBackgroundColor)] py-[20px] mt-10 md:py-[30px]">
+                <main className="container flex items-center justify-center mx-auto">
                     <NavSocSeti />
                 </main>
             </footer>

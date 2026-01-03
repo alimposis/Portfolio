@@ -32,7 +32,7 @@ export default function RootLayout({
             <body className={`${cabinSans.className} antialiased bg-[var(--mainBackgroundColor)]`}>
                 <Header />
                 {children}
-                {/* <Footer /> */}
+                <Footer />
             </body>
         </html>
     );

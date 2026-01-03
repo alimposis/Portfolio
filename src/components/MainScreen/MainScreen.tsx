@@ -11,7 +11,9 @@ export const MainScreen = () => {
                     <MyPhoto />
                     <MyName />
                 </main>
-                <NavSocSeti />
+                <div className="md:mb-[5vw]">
+                    <NavSocSeti />
+                </div>
                 <ToTheBottom href="#TwoSection" />
             </section>
         </>

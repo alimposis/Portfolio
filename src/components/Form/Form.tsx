@@ -6,7 +6,6 @@ import { motion } from 'framer-motion';
 import axios from 'axios';
 import { useActionState } from 'react';
 
-import { Input } from '@/components/ui/Input/Input';
 import { TextareaForm } from './TextareaForm/TextareaForm';
 import { animationOpacity } from '@/data/animations';
 import { Button } from '@/components/ui/Button/Button';
