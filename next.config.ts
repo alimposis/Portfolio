@@ -1,7 +1,7 @@
 import type { NextConfig } from 'next';
 /** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
-    pageExtensions: ['tsx', 'ts'],
+    pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
     env: {
         TELEGRAMM_API:
             'https://api.telegram.org/bot7903831160:AAE5hZXW8wtja0h-h-0dRzwJvS9N9ZHOsqQ/sendMessage',
