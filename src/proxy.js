@@ -3,10 +3,10 @@ import { match } from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
 
 let locales = ['en', 'ru'];
-
 let headers = { 'accept-language': 'en-US,en;q=0.5' };
 let languages = new Negotiator({ headers }).languages();
 let defaultLocale = 'en';
+
 export function proxy(request) {
     const { pathname } = request.nextUrl;
     const pathnameHasLocale = locales.some(

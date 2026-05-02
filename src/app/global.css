@@ -15,3 +15,9 @@
 @theme {
     --color-main-color: #462466;
 }
+
+@layer components {
+    .btn-base {
+        @apply outline-none w-full bg-[var(--mainColor)] text-[var(--mainText)] border-2 rounded-lg px-2;
+    }
+}
