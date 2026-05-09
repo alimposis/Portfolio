@@ -12,9 +12,9 @@ export const MyStackWrapper = async () => {
         });
     return (
         <>
-            <div className="wrapper">
+            <div className="flex w-auto flex-wrap gap-3 my-5 justify-center">
                 {stackData &&
-                    stackData.map(e => {
+                    stackData.map((e, index) => {
                         return (
                             <StackWindow
                                 key={e.id}

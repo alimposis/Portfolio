@@ -20,4 +20,13 @@
     .btn-base {
         @apply outline-none w-full bg-[var(--mainColor)] text-[var(--mainText)] border-2 rounded-lg px-2;
     }
+    .title-base {
+        @apply text-3xl md:text-5xl text-[var(--secondaryColor)];
+    }
+    .subtitle-base {
+        @apply text-2xl md:text-3xl text-[var(--secondaryColor)];
+    }
+    .shadow-base {
+        @apply shadow-lg shadow-main-color;
+    }
 }

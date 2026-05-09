@@ -22,3 +22,18 @@ export const animationLeft = {
     animate: { x: 0 },
     transition: { delay: 0.5 },
 };
+export const stackWindowTitle = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    transition: { delay: 0.5 },
+};
+export const stackWindowText = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    transition: { delay: 0.7 },
+};
+export const progressBar = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    transition: { delay: 0.6 },
+};

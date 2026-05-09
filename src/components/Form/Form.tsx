@@ -42,10 +42,10 @@ const Form = () => {
     });
 
     return (
-        <section id="myForm">
+        <section id="myForm" className="my-5">
             <main className="mx-3.5 md:mx-auto md:max-w-2xl">
                 <motion.form
-                    className="shadow-lg w-full  shadow-main-color gap-y-3 flex flex-col  items-center bg-[var(--secondaryBackgroundColor)] p-[20px] border-2 border-[var(--mainColor)] rounded-md text-[var(--mainText)] mx-auto md:mb-[50px]"
+                    className="shadow-base w-full   gap-y-3 flex flex-col  items-center bg-[var(--secondaryBackgroundColor)] p-[20px] border-2 border-[var(--mainColor)] rounded-md text-[var(--mainText)] mx-auto md:mb-[50px] "
                     action={submitAction}
                     initial={animationOpacity.initial}
                     whileInView={animationOpacity.animate}

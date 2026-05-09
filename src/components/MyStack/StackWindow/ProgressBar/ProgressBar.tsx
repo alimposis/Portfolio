@@ -1,10 +1,23 @@
 import ProgressBarStyle from './ProgressBar.module.scss';
 
+import { motion } from 'framer-motion';
+
+import { progressBar } from '@/data/animations';
+
 export const ProgressBar = ({ progress }: { progress: string }) => {
     return (
         <>
-            <p>Progress:</p>
-            <div
+            <motion.p
+                initial={progressBar.initial}
+                animate={progressBar.animate}
+                transition={progressBar.transition}
+            >
+                Progress:
+            </motion.p>
+            <motion.div
+                initial={progressBar.initial}
+                animate={progressBar.animate}
+                transition={progressBar.transition}
                 role="progressbar"
                 aria-valuemin={0}
                 aria-valuemax={100}
@@ -14,7 +27,7 @@ export const ProgressBar = ({ progress }: { progress: string }) => {
                     className={ProgressBarStyle.progressbar__span}
                     style={{ width: progress }}
                 ></span>
-            </div>
+            </motion.div>
         </>
     );
 };
