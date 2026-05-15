@@ -28,7 +28,7 @@
         "**/*.tsx",
         ".next/types/**/*.ts",
         ".next/dev/types/**/*.ts",
-        "src/proxy.js"
+        "src/peoxy.js"
     ],
     "exclude": ["node_modules"]
 }

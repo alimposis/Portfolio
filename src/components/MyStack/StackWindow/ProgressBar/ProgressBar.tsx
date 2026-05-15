@@ -21,10 +21,10 @@ export const ProgressBar = ({ progress }: { progress: string }) => {
                 role="progressbar"
                 aria-valuemin={0}
                 aria-valuemax={100}
-                className={ProgressBarStyle.progressbar}
+                className="h-[10px] bg-[var(--mainBackgroundColor)] color-white width-[80%] border border-[var(--secondaryColor)] rounded-2xl md:h-[15px]"
             >
                 <span
-                    className={ProgressBarStyle.progressbar__span}
+                    className="flex h-full bg-[var(--mainColor)] rounded-2xl"
                     style={{ width: progress }}
                 ></span>
             </motion.div>

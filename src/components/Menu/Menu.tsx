@@ -6,7 +6,6 @@ import { AdaptiveMenu } from './AdaptiveMenu/AdaptiveMenu';
 
 export const Menu = () => {
     const pathname = usePathname();
-    console.debug(pathname);
     return (
         <>
             <DesktopMenu pathname={pathname} />

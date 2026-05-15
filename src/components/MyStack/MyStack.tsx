@@ -1,4 +1,3 @@
-import MyStackStyle from './MyStack.module.scss';
 import { MyStackWrapper } from './MyStackWrapper/MyStackWrapper';
 
 export const MyStack = async () => {

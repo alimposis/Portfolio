@@ -37,3 +37,8 @@ export const progressBar = {
     animate: { opacity: 1 },
     transition: { delay: 0.6 },
 };
+export const adaptiveMenu = {
+    initial: { x: -500, opacity: 0 },
+    animate: { x: 0, opacity: 1 },
+    exit: { x: -500, opacity: 0 },
+};
