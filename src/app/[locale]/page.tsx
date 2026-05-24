@@ -5,8 +5,7 @@ import { AboutMe } from '@/components/AboutMe/AboutMe';
 const LocationSection = dynamic(() => import('@/components/LocationSection/LocationSection'));
 const Form = dynamic(() => import('@/components/Form/Form'));
 
-export default async function Home({ params }: PageProps<'/[lang]'>) {
-    const { lang } = await params;
+export default async function Home() {
     return (
         <>
             <MainScreen />

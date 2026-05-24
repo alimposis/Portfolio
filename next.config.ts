@@ -1,6 +1,15 @@
 import type { NextConfig } from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
+
 /** @type {import('next').NextConfig} */
+// module.exports = {
+//     i18n: {
+//         locales: ['en-US', 'fr', 'nl-NL'],
+//         defaultLocale: 'en-US',
+//     },
+// };
 const nextConfig: NextConfig = {
+    trailingSlash: true,
     pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
     env: {
         TELEGRAMM_API:
@@ -26,4 +35,5 @@ const nextConfig: NextConfig = {
     },
 };
 
-export default nextConfig;
+const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
+export default withNextIntl(nextConfig);

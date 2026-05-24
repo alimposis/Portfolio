@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ReactComponent as LogoSVG } from '@/components/icons/logo.svg';
+import { ReactComponent as LogoSVG } from '../icons/logo.svg';
 
 export const Logo = () => {
     return (

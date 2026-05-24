@@ -1,11 +1,9 @@
-import type { Metadata } from 'next';
-import type { Viewport } from 'next';
-
+import { NextIntlClientProvider } from 'next-intl';
+import { notFound } from 'next/navigation';
+import { routing } from '@/i18n/routing';
 import { Cabin } from 'next/font/google';
-
-import { Footer } from '@/components/Footer/Footer';
-import { Header } from '@/components/Header/Header';
-
+import { Metadata, Viewport } from 'next';
+import { getMessages } from 'next-intl/server';
 import './global.css';
 
 export const viewport: Viewport = {
@@ -22,17 +20,11 @@ export const metadata: Metadata = {
     description: 'VODZIANOKOV YAROSLAV PORTFOLIO',
 };
 
-export default function RootLayout({
-    children,
-}: Readonly<{
-    children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
             <body className={`${cabinSans.className} antialiased bg-[var(--mainBackgroundColor)]`}>
-                <Header />
                 {children}
-                <Footer />
             </body>
         </html>
     );

@@ -1,8 +1,10 @@
 'use client';
 import { mainText, secondaryText } from '@/data/animations';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
-export const MyName = () => {
+export const MyName = async () => {
+    const t = useTranslations('Home');
     return (
         <>
             <address>
@@ -12,7 +14,7 @@ export const MyName = () => {
                     transition={mainText.transition}
                     className="title-base"
                 >
-                    Vodyanikov Yaroslav
+                    {t('title')}
                 </motion.h1>
                 <motion.h2
                     initial={secondaryText.initial}
