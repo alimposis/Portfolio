@@ -9,7 +9,6 @@ import createNextIntlPlugin from 'next-intl/plugin';
 //     },
 // };
 const nextConfig: NextConfig = {
-    trailingSlash: true,
     pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
     env: {
         TELEGRAMM_API:

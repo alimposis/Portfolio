@@ -1,5 +1,20 @@
 {
-    "Home": {
-        "title": "Hello"
+    "heroScreen": {
+        "title": "Yaroslav",
+        "subTitle": "Front-end developer"
+    },
+    "aboutMe": {
+        "mainTitle": "About me",
+        "workExperienceTitle": "Work experience",
+        "workExperienceDesc": "Web Developer at “TARGET-GROUP,” 2024 Stack: JS, WordPress, React, jQuery, HTML, CSS, Figma",
+        "educationTitle": "Education",
+        "educationDesc": "I completed courses at “IT Step Academy”, gaining practical skills in JS, TS, React, HTML, and CSS to build modern web applications.",
+        "yearAndAdditionalDesc": "I am a 23-year-old Frontend Developer committed to continuous growth and mastering my craft.",
+        "moodDesc": "I am highly motivated to develop my technical and professional skills, and I am open to relocation for the right opportunity that helps me advance in my field."
+    },
+    "form": {
+        "title": "Contact with me",
+        "textArea": "Write a message",
+        "button": "Send"
     }
 }

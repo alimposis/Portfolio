@@ -3,8 +3,8 @@ import { mainText, secondaryText } from '@/data/animations';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
-export const MyName = async () => {
-    const t = useTranslations('Home');
+export const MyName = () => {
+    const t = useTranslations('heroScreen');
     return (
         <>
             <address>
@@ -22,7 +22,7 @@ export const MyName = async () => {
                     transition={secondaryText.transition}
                     className="subtitle-base"
                 >
-                    Front-end development
+                    {t('subTitle')}
                 </motion.h2>
             </address>
         </>
